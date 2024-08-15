@@ -5,6 +5,9 @@ body {
     padding: 0;
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -52,8 +55,10 @@ nav a:hover {
 
 section {
     padding: 20px;
+    flex: 1; /* This allows the section to grow and fill available space */
 }
 
+/* Buttons Styling */
 .button {
     display: inline-block;
     background-color: orange;
@@ -61,13 +66,20 @@ section {
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    margin: 10px 5px;
+    margin: 10px;
     border-radius: 4px;
     font-weight: bold;
 }
 
 .button:hover {
     background-color: #cc6600;
+}
+
+/* Grid Layout for Buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 /* YouTube Button Styling */
@@ -87,11 +99,14 @@ section {
     background-color: #CC0000; /* Darker YouTube Red on hover */
 }
 
+/* Footer Styling */
 footer {
     background-color: #222;
-    padding: 20px;
+    padding: 10px 20px;
     text-align: center;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
@@ -129,5 +144,9 @@ footer p {
         padding: 10px;
         display: block;
         text-align: center;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr; /* Single column for small screens */
     }
 }
