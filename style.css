@@ -1,71 +1,64 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
     margin: 0;
     padding: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Header Styles */
 header {
-    background-color: #333;
-    padding: 10px;
-    position: relative;
+    background-color: #222;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h1 {
+header h1 {
     margin: 0;
 }
 
-/* Menu Toggle Button */
 .menu-toggle {
     display: none;
     font-size: 24px;
     cursor: pointer;
-    color: orange;
 }
 
-/* Navigation Styles */
 nav {
     display: flex;
-    justify-content: center;
-    background-color: #444;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-nav ul li {
-    margin: 0 10px;
+nav li {
+    margin-right: 20px;
 }
 
-nav ul li a {
-    text-decoration: none;
+nav a {
     color: white;
+    text-decoration: none;
     font-weight: bold;
-    padding: 10px;
 }
 
-nav ul li a:hover {
-    background-color: orange;
+nav a:hover {
+    color: orange;
 }
 
-/* Section Styles */
 section {
     padding: 20px;
+    flex: 1; /* This allows the section to grow and fill available space */
 }
 
-.profile-photo {
-    width: 150px;
-    border-radius: 50%;
-}
-
-/* Button Styles */
+/* Buttons Styling */
 .button {
     display: flex;
     align-items: center;
@@ -83,99 +76,36 @@ section {
     background-color: #cc6600;
 }
 
-.button i {
+.icon {
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
-    font-size: 20px; /* Adjust size as needed */
 }
 
-/* Repository Button Styles */
-.repo-buttons {
-    display: flex;
-    flex-wrap: wrap;
+/* Grid Layout for Buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
-.repo-buttons a {
-    width: calc(50% - 10px); /* Two items per row with spacing */
-    box-sizing: border-box;
-}
-
-/* Contact Section Styles */
-#contact .buttons, #contact .whatsapp-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-#contact .buttons a, #contact .whatsapp-links a {
-    width: calc(50% - 10px); /* Two items per row with spacing */
-    box-sizing: border-box;
-}
-
-/* WhatsApp Button Styling */
-.whatsapp-button {
-    background-color: #25D366;
-    color: white;
-}
-
-.whatsapp-button:hover {
-    background-color: #1DA851;
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* YouTube Button Styling */
 .youtube-button {
-    background-color: #FF0000;
+    background-color: #FF0000; /* YouTube Red */
     color: white;
-}
-
-.youtube-button:hover {
-    background-color: #CC0000;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav.show {
-        display: flex;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-    }
-
-    .repo-buttons a, #contact .buttons a, #contact .whatsapp-links a {
-        width: 100%; /* Full width on smaller screens */
-    }
-}
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: bold;
+    
