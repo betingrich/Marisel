@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repositories</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>Repositories</h1>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <span class="menu-toggle" onclick="toggleMenu()">☰</span>
         <nav id="menu" class="hidden">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -23,28 +22,21 @@
     </header>
 
     <section id="repositories">
-        <h2>My Repositories</h2>
-        <div class="repo-buttons">
-            <a href="bugatti.html" class="button">
-                <i class="fas fa-car"></i> Bugatti
-            </a>
-            <a href="maserati.html" class="button">
-                <i class="fas fa-car"></i> Maserati
-            </a>
-            <a href="lamborghini.html" class="button">
-                <i class="fas fa-car"></i> Lamborghini
-            </a>
-            <a href="merlin-md.html" class="button">
-                <i class="fas fa-robot"></i> Merlin-Md
-            </a>
+        <div class="repo-list">
+            <a href="bugatti.html" class="repo-button">Bugatti</a>
+            <a href="maserati.html" class="repo-button">Maserati</a>
+            <a href="lamborghini.html" class="repo-button">Lamborghini</a>
+            <a href="merlin-md.html" class="repo-button">Merlin-Md</a>
         </div>
     </section>
 
     <footer>
-        <p>Thank you for using my bots!</p>
-        <a href="https://www.youtube.com/channel/@wemacomic" class="button youtube-button" target="_blank">
-            <i class="fab fa-youtube"></i> Visit My YouTube Channel
+        <a href="https://www.youtube.com/channel/@wemacomic" class="youtube-button" target="_blank">
+            <i class="fa fa-youtube"></i> YouTube
         </a>
+        <div class="appreciation-button">
+            Thank you for using my bots! Your support means a lot.
+        </div>
     </footer>
 
     <script src="scripts.js"></script>
