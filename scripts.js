@@ -1,9 +1,10 @@
 // scripts.js
 
-// Function to toggle the menu visibility
 function toggleMenu() {
     const menu = document.getElementById('menu');
-    menu.classList.toggle('hidden');
+    if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+    } else {
+        menu.classList.add('show');
+    }
 }
-
-// Optional: Add any additional scripts or functionalities here
