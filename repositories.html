@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Repositories</title>
+    <title>Repositories</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>My Repositories</h1>
+        <h1>Repositories</h1>
         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-        <nav id="menu">
+        <nav id="menu" class="hidden">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="repositories.html">Repositories</a></li>
@@ -22,26 +23,28 @@
     </header>
 
     <section id="repositories">
-        <h2>Explore My GitHub Repositories</h2>
-        <div class="buttons">
-            <a href="https://github.com/betingrich/Bugatti" class="button" target="_blank">
-                <img src="icons/bugatti.png" alt="Bugatti" class="icon"> Bugatti
+        <h2>My Repositories</h2>
+        <div class="repo-buttons">
+            <a href="https://github.com/betingrich/bugatti" class="button" target="_blank">
+                <i class="fas fa-car"></i> Bugatti
             </a>
-            <a href="https://github.com/betingrich/Maserati" class="button" target="_blank">
-                <img src="icons/maserati.png" alt="Maserati" class="icon"> Maserati
+            <a href="https://github.com/betingrich/maserati" class="button" target="_blank">
+                <i class="fas fa-car"></i> Maserati
             </a>
-            <a href="https://github.com/betingrich/Lamborghini" class="button" target="_blank">
-                <img src="icons/lamborghini.png" alt="Lamborghini" class="icon"> Lamborghini
+            <a href="https://github.com/betingrich/lamborghini" class="button" target="_blank">
+                <i class="fas fa-car"></i> Lamborghini
             </a>
-            <a href="https://github.com/betingrich/readme.md" class="button" target="_blank">
-                <img src="icons/readme.png" alt="Readme" class="icon"> Readme.md
+            <a href="https://github.com/betingrich/Merlin-Md" class="button" target="_blank">
+                <i class="fas fa-file-alt"></i> README.md
             </a>
         </div>
     </section>
 
     <footer>
         <p>Thank you for using my bots!</p>
-        <a href="https://www.youtube.com/channel/@wemacomic" class="button youtube-button" target="_blank">Visit My YouTube Channel</a>
+        <a href="https://www.youtube.com/channel/YourChannelLink" class="button youtube-button" target="_blank">
+            <i class="fab fa-youtube"></i> Visit My YouTube Channel
+        </a>
     </footer>
 
     <script src="scripts.js"></script>
