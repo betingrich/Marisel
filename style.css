@@ -85,7 +85,31 @@ section {
 
 .button i {
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 20px; /* Adjust size as needed */
+}
+
+/* Repository Button Styles */
+.repo-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.repo-buttons a {
+    width: calc(50% - 10px); /* Two items per row with spacing */
+    box-sizing: border-box;
+}
+
+/* Contact Section Styles */
+#contact .buttons, #contact .whatsapp-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#contact .buttons a, #contact .whatsapp-links a {
+    width: calc(50% - 10px); /* Two items per row with spacing */
+    box-sizing: border-box;
 }
 
 /* WhatsApp Button Styling */
@@ -96,6 +120,16 @@ section {
 
 .whatsapp-button:hover {
     background-color: #1DA851;
+}
+
+/* YouTube Button Styling */
+.youtube-button {
+    background-color: #FF0000;
+    color: white;
+}
+
+.youtube-button:hover {
+    background-color: #CC0000;
 }
 
 /* Footer Styles */
@@ -139,5 +173,9 @@ footer {
         text-decoration: none;
         color: white;
         padding: 10px;
+    }
+
+    .repo-buttons a, #contact .buttons a, #contact .whatsapp-links a {
+        width: 100%; /* Full width on smaller screens */
     }
 }
