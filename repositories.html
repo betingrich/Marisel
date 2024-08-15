@@ -3,25 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repositories</title>
+    <title>My Repositories</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>My Repositories</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="repositories.html">Repositories</a></li>
+                <li><a href="websites.html">Websites</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="session-generator.html">Session Generator</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <main>
-        <div class="repo-grid">
-            <a href="bugatti.html" class="button">Bugatti</a>
-            <a href="maserati.html" class="button">Maserati</a>
-            <a href="lamborghini.html" class="button">Lamborghini</a>
-            <a href="merlin-md.html" class="button">Merlin-Md</a>
+
+    <section id="repositories">
+        <h2>Explore My GitHub Repositories</h2>
+        <div class="buttons">
+            <a href="https://github.com/betingrich/Bugatti" class="button" target="_blank">
+                <img src="icons/bugatti.png" alt="Bugatti" class="icon"> Bugatti
+            </a>
+            <a href="https://github.com/betingrich/Maserati" class="button" target="_blank">
+                <img src="icons/maserati.png" alt="Maserati" class="icon"> Maserati
+            </a>
+            <a href="https://github.com/betingrich/Lamborghini" class="button" target="_blank">
+                <img src="icons/lamborghini.png" alt="Lamborghini" class="icon"> Lamborghini
+            </a>
+            <a href="https://github.com/betingrich/readme.md" class="button" target="_blank">
+                <img src="icons/readme.png" alt="Readme" class="icon"> Readme.md
+            </a>
         </div>
-    </main>
-    
+    </section>
+
     <footer>
-        <a href="https://youtube.com/Channel/@wemacomic" class="youtube-button">Appreciation</a>
+        <p>Thank you for using my bots!</p>
+        <a href="https://www.youtube.com/channel/@wemacomic" class="button youtube-button" target="_blank">Visit My YouTube Channel</a>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
