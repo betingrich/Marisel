@@ -172,14 +172,15 @@ footer .youtube-button:hover {
 }
 
 /* Button Grid for Main Page */
-#repositories .repo-list {
+#repositories {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: space-around;
 }
 
-#repositories .repo-button {
-    flex: 1 1 calc(50% - 10px); /* Two buttons per row with spacing */
+.repo-button {
+    flex: 1 1 calc(50% - 20px); /* Two buttons per row with spacing */
     text-align: center;
 }
 
@@ -201,4 +202,4 @@ footer .youtube-button:hover {
 #repo-details {
     max-width: 800px;
     margin: 0 auto;
-}
+    }
