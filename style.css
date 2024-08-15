@@ -1,181 +1,146 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Header Styles */
+/* Header */
 header {
-    background-color: #333;
-    padding: 10px;
+    background-color: #1a1a1a;
+    padding: 15px;
+    text-align: center;
     position: relative;
 }
 
 h1 {
     margin: 0;
-}
-
-/* Menu Toggle Button */
-.menu-toggle {
-    display: none;
     font-size: 24px;
+    color: #f77f00; /* Orange color */
+}
+
+/* Menu Toggle (Three Dots) */
+.menu-toggle {
+    font-size: 24px;
+    color: #f77f00; /* Orange color */
+    position: absolute;
+    top: 15px;
+    right: 15px;
     cursor: pointer;
-    color: orange;
 }
 
-/* Navigation Styles */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #444;
+/* Navigation Menu */
+#menu {
+    display: none;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+#menu ul {
+    list-style: none;
     margin: 0;
-    display: flex;
+    padding: 0;
 }
 
-nav ul li {
-    margin: 0 10px;
+#menu ul li {
+    border-bottom: 1px solid #333;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+#menu ul li a {
+    display: block;
     padding: 10px;
+    color: #f77f00; /* Orange color */
+    text-decoration: none;
+    text-align: center;
 }
 
-nav ul li a:hover {
-    background-color: orange;
+#menu ul li a:hover {
+    background-color: #f77f00; /* Orange color */
+    color: #000;
 }
 
-/* Section Styles */
-section {
+/* Section Styling */
+section#contact {
+    flex: 1;
     padding: 20px;
+    text-align: center;
 }
 
-.profile-photo {
-    width: 150px;
-    border-radius: 50%;
+section#contact h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
-/* Button Styles */
-.button {
-    display: flex;
-    align-items: center;
-    background-color: orange;
-    color: black;
-    padding: 10px 20px;
+/* Buttons */
+.buttons .button,
+.whatsapp-links .button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f77f00; /* Orange color */
+    color: #fff;
+    font-size: 16px;
     text-align: center;
     text-decoration: none;
-    margin: 10px;
-    border-radius: 4px;
-    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 200px;
 }
 
-.button:hover {
-    background-color: #cc6600;
+.buttons .button i,
+.whatsapp-links .button i {
+    margin-right: 8px;
 }
 
-.button i {
-    margin-right: 10px;
-    font-size: 20px; /* Adjust size as needed */
+.buttons .button:hover,
+.whatsapp-links .button:hover {
+    background-color: #ff5722; /* Darker orange */
 }
 
-/* Repository Button Styles */
-.repo-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.repo-buttons a {
-    width: calc(50% - 10px); /* Two items per row with spacing */
-    box-sizing: border-box;
-}
-
-/* Contact Section Styles */
-#contact .buttons, #contact .whatsapp-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-#contact .buttons a, #contact .whatsapp-links a {
-    width: calc(50% - 10px); /* Two items per row with spacing */
-    box-sizing: border-box;
-}
-
-/* WhatsApp Button Styling */
-.whatsapp-button {
-    background-color: #25D366;
-    color: white;
-}
-
-.whatsapp-button:hover {
-    background-color: #1DA851;
-}
-
-/* YouTube Button Styling */
-.youtube-button {
-    background-color: #FF0000;
-    color: white;
-}
-
-.youtube-button:hover {
-    background-color: #CC0000;
-}
-
-/* Footer Styles */
+/* Footer Styling */
 footer {
-    background-color: #333;
-    padding: 10px;
+    background-color: #1a1a1a;
+    padding: 10px 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc;
+}
 
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
+footer .youtube-button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #ff0000; /* Red for YouTube */
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
 
-    nav.show {
-        display: flex;
-    }
+footer .youtube-button:hover {
+    background-color: #e60000; /* Darker red */
+}
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-    }
-
-    .repo-buttons a, #contact .buttons a, #contact .whatsapp-links a {
-        width: 100%; /* Full width on smaller screens */
-    }
+/* Utility Classes */
+.hidden {
+    display: none;
 }
