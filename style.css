@@ -1,64 +1,71 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: black;
     color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header Styles */
 header {
-    background-color: #222;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    position: relative;
 }
 
-header h1 {
+h1 {
     margin: 0;
 }
 
+/* Menu Toggle Button */
 .menu-toggle {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    color: orange;
 }
 
+/* Navigation Styles */
 nav {
     display: flex;
+    justify-content: center;
+    background-color: #444;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-nav li {
-    margin-right: 20px;
+nav ul li {
+    margin: 0 10px;
 }
 
-nav a {
-    color: white;
+nav ul li a {
     text-decoration: none;
+    color: white;
     font-weight: bold;
+    padding: 10px;
 }
 
-nav a:hover {
-    color: orange;
+nav ul li a:hover {
+    background-color: orange;
 }
 
+/* Section Styles */
 section {
     padding: 20px;
-    flex: 1; /* This allows the section to grow and fill available space */
 }
 
-/* Buttons Styling */
+.profile-photo {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Button Styles */
 .button {
     display: flex;
     align-items: center;
@@ -76,36 +83,61 @@ section {
     background-color: #cc6600;
 }
 
-.icon {
-    width: 20px;
-    height: 20px;
+.button i {
     margin-right: 10px;
+    font-size: 20px;
 }
 
-/* Grid Layout for Buttons */
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-/* Profile Photo */
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
-}
-
-/* YouTube Button Styling */
-.youtube-button {
-    background-color: #FF0000; /* YouTube Red */
+/* WhatsApp Button Styling */
+.whatsapp-button {
+    background-color: #25D366;
     color: white;
-    padding: 10px 20px;
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    padding: 10px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 4px;
-    font-weight: bold;
-    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+    }
+}
