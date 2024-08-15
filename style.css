@@ -1,218 +1,179 @@
-/* style.css */
-
-/* General Styles */
+/* General Styling */
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #000;
     color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-/* Header Styles */
 header {
-    background-color: #333;
+    background-color: #1a1a1a;
     padding: 15px;
+    text-align: center;
     position: relative;
 }
 
-header h1 {
+h1 {
     margin: 0;
     font-size: 24px;
-    color: #fff;
+    color: #f77f00; /* Orange color */
 }
 
+/* Menu Toggle (Three lines) */
 .menu-toggle {
-    font-size: 24px;
-    color: #fff;
     position: absolute;
     top: 15px;
     right: 15px;
+    font-size: 24px;
     cursor: pointer;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav.hidden {
-    display: none;
+    color: #f77f00; /* Matches the theme color */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
+    padding: 0;
+    display: none;
+    text-align: left;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 15px;
+    margin: 10px 0;
 }
 
 nav ul li a {
     color: #fff;
-    font-size: 18px;
+    text-decoration: none;
 }
 
-/* Main Section Styles */
-section {
-    padding: 20px;
+.hidden {
+    display: none;
 }
 
-button {
+/* Profile Section */
+.profile {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 3px solid #f77f00; /* Orange border color */
+}
+
+.profile p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-container .button {
     display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
     background-color: #f77f00; /* Orange color */
+    color: #fff;
     font-size: 16px;
     text-align: center;
-    border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.button-container .button:hover {
     background-color: #ff5722; /* Darker orange */
 }
 
-button i {
-    margin-right: 10px;
-}
-
-.repo-button {
-    display: block;
-    margin: 10px 0;
-    font-size: 18px;
-    padding: 15px;
-    text-align: center;
-    background-color: #333;
-    border: 2px solid #f77f00;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.repo-button:hover {
-    background-color: #f77f00;
-    color: #fff;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer .button {
-    margin: 10px 0;
-    display: inline-block;
-    background-color: #f77f00; /* Orange color */
-    border-radius: 5px;
-    font-size: 16px; /* Medium size */
-    padding: 10px 20px;
-}
-
-footer .appreciation-button {
-    margin-top: 20px;
-    display: block;
-    background-color: #333;
-    color: #f77f00;
-    border: 2px solid #f77f00;
-    font-size: 16px; /* Medium size */
-    padding: 10px 20px;
-    text-align: center;
-}
-
-footer .youtube-button {
-    margin: 10px 0;
-    font-size: 16px; /* Medium size */
-    padding: 10px 20px;
-    display: inline-block;
-    background-color: #f77f00; /* Orange color */
-    color: #fff;
-    border-radius: 5px;
-}
-
-footer .youtube-button i {
-    margin-right: 10px;
-}
-
-footer .youtube-button:hover {
-    background-color: #ff5722; /* Darker orange */
-}
-
-/* Responsive Design */
+/* Responsive Design for Buttons */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 20px;
-    }
-
-    .menu-toggle {
-        font-size: 20px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
-
-/* Button Grid for Main Page */
-#repositories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-around;
-}
-
-.repo-button {
-    flex: 1 1 calc(50% - 20px); /* Two buttons per row with spacing */
-    text-align: center;
-}
-
-/* Profile Image Styling */
-    .profile-img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-top: 10px;
-        border: 3px solid #f77f00; /* Border color matching the orange theme */
-    }
-
-    .profile {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .profile p {
-        font-size: 16px;
-        margin: 10px 0;
-        color: #ccc; /* Slightly lighter text for the description */
-    }
-
-    /* Button Container for Access and Fork */
     .button-container {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
+        flex-direction: column;
     }
 
     .button-container .button {
-        flex: 1 1 45%; /* Adjust button width based on container */
-        text-align: center;
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px;
     }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer .youtube-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .appreciation-button {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Additional Adjustments */
+#repo-details {
+    padding-bottom: 60px; /* To avoid content overlap with fixed footer */
+}
+
+/* Repositories Page - 2x2 Grid Layout */
+.repo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.repo-grid .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #f77f00;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    text-decoration: none;
+}
+
+.repo-grid .button:hover {
+    background-color: #ff5722;
+}
+
+/* Forcing Footer at the Bottom */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
