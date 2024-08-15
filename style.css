@@ -23,64 +23,42 @@ h1 {
     color: #f77f00; /* Orange color */
 }
 
-/* Menu Toggle (Three lines) */
-.menu-toggle {
+/* Three Dots Menu Button */
+.menu-button {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
     position: absolute;
     top: 15px;
     right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #f77f00; /* Matches the theme color */
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: none;
-    text-align: left;
+.menu-button div {
+    width: 100%;
+    height: 4px;
+    background-color: #f77f00; /* Orange color */
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-nav ul li {
-    margin: 10px 0;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Profile Section */
-.profile {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-top: 10px;
-    border: 3px solid #f77f00; /* Orange border color */
-}
-
-.profile p {
-    font-size: 16px;
-    color: #ccc;
+/* Menu Button Hover Effect */
+.menu-button:hover div {
+    background-color: #ff5722; /* Darker orange */
 }
 
 /* Button Container */
-.button-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+.repo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    padding: 20px;
+    justify-items: center;
 }
 
+.repo-grid .button,
 .button-container .button {
     display: inline-block;
     padding: 15px 25px;
@@ -93,20 +71,9 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
+.repo-grid .button:hover,
 .button-container .button:hover {
     background-color: #ff5722; /* Darker orange */
-}
-
-/* Responsive Design for Buttons */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-    }
-
-    .button-container .button {
-        width: 100%; /* Full width on small screens */
-        margin-bottom: 10px;
-    }
 }
 
 /* Footer Styling */
@@ -116,6 +83,9 @@ footer {
     padding: 10px 0;
     margin-top: auto;
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 footer .youtube-button {
@@ -127,44 +97,6 @@ footer .youtube-button {
     text-decoration: none;
     font-size: 18px;
     margin-bottom: 10px;
-}
-
-footer .appreciation-button {
-    font-size: 14px;
-    color: #fff;
-}
-
-/* Additional Adjustments */
-#repo-details {
-    padding-bottom: 60px; /* To avoid content overlap with fixed footer */
-}
-
-/* Repositories Page - 2x2 Grid Layout */
-.repo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-}
-
-.repo-grid .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-size: 18px;
-    text-align: center;
-    background-color: #f77f00;
-    color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 200px;
-    text-decoration: none;
-}
-
-.repo-grid .button:hover {
-    background-color: #ff5722;
 }
 
 /* Forcing Footer at the Bottom */
